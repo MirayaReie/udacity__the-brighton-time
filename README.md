@@ -1,1 +1,1 @@
-# udacity__the-brighton-time
+Initial project state - no responsiveness whatsoever.
