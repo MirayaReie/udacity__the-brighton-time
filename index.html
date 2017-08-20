@@ -7,6 +7,7 @@
     <title>Brighton Times</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="responsive.css">
   </head>
   <body>
 
@@ -17,6 +18,7 @@
           The Brighton Times
         </h1>
       </div>
+      <button class="header__menu">&#9776;</button>
     </header>
 
     <nav id="drawer" class="nav">
@@ -178,5 +180,17 @@
         </ul>
       </footer>
     </main>
+    <script>
+      const main = document.querySelector('main');
+      const header__menu = document.querySelector('.header__menu');
+      const drawer = document.querySelector('#drawer');
+      header__menu.addEventListener('click', (event) => {
+        drawer.classList.toggle('open');
+        event.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+    </script>
   </body>
 </html>
