@@ -2,6 +2,11 @@
   display: none;
 }
 
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @media screen and (max-width: 400px) {
   .header {
     margin-bottom: 12px;
@@ -25,8 +30,8 @@
   }
 
   .header__title {
-    margin: .75em 0 0 0;
-    font-size: 2.1em;
+    margin: .75em 0;
+    font-size: 1.7em;
   }
 
   .nav {
@@ -50,7 +55,51 @@
     width: 150px;
     background: linear-gradient(180deg, #fff, #fafafa);
   }
+
+  td:first-child,
+  th:first-child {
+    display: none;
+  }
+
+  .snippet__thumbnail {
+    display: none;
+  }
 }
 
-@media screen and (min-width: 401px) {
+@media screen and (max-width: 525px) {
+  .hero__caption {
+    font-size: 1.2em;
+  }
+
+  .hero p {
+    font-size: .8em;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 525px) {
+  .header__logo {
+    height: 54px;
+  }
+  .header__title {
+    margin: .75em 0;
+    font-size: 2.3em;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .hero,
+  .scores {
+    width: 60%;
+  }
+  .top-news,
+  .weather {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    width: 800px;
+    margin: 0 auto;
+  }
 }
